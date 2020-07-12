@@ -1,0 +1,30 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background: linear-gradient(56deg, $mainCol 66%, $accentCol 66% 71%, $titleCol 71%) no-repeat;
+    height: 100vh;
+}
+
+body, button {
+    font-family: $bodyFont;
+    font-weight: $light;
+    @include fontSize;
+}
+
+h1 {
+    font-family: $titleFont;
+    @include fontSize(83);
+}
+
+h2 {
+    text-transform: lowercase;
+    @include fontSize(29);
+}
+
+button {
+    text-transform: uppercase;
+    font-weight: $med;
+    @include fontSize(23)
+}

@@ -226,7 +226,7 @@ html {
 }
 
 body {
-  background: linear-gradient(56deg, #5B5F97 66%, #FFC145 66% 71%, #FF6B6C 71%) no-repeat;
+  background: linear-gradient(56deg, #5B5F97 56%, #FFC145 56% 62%, #FF6B6C 62%) no-repeat;
   height: 100vh;
 }
 
@@ -234,24 +234,64 @@ body, button {
   font-family: fenwick, sans-serif;
   font-weight: 300;
   font-size: 25px;
-  font-size: 1.5rem;
+  font-size: 1.3375rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main {
+  background-color: #FFFFFB;
+  max-width: 1400px;
+  width: 63.5%;
+  margin: 0 auto;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 7.5% 0 8.5%;
+  border-radius: 1rem;
+  -webkit-box-shadow: 0 0.5rem 0.2rem rgba(10, 11, 34, 0.2);
+          box-shadow: 0 0.5rem 0.2rem rgba(10, 11, 34, 0.2);
 }
 
 h1 {
   font-family: fenwick-outline, sans-serif;
   font-size: 83px;
-  font-size: 4.98rem;
+  font-size: 4.4405rem;
+  color: #FF6B6C;
 }
 
 h2 {
   text-transform: lowercase;
   font-size: 29px;
-  font-size: 1.74rem;
+  font-size: 1.5515rem;
+  margin-top: 1.25%;
+  color: #FFC145;
+  letter-spacing: -.045rem;
 }
 
 button {
   text-transform: uppercase;
   font-weight: 400;
+  padding: 1.25% 6.55%;
   font-size: 23px;
-  font-size: 1.38rem;
+  font-size: 1.2305rem;
+  margin-top: 8%;
+  background-color: #5B5F97;
+  border: none;
+  border-radius: 15rem;
+  color: #FFC145;
+  -webkit-box-shadow: 0 0.2rem 0.2rem rgba(184, 184, 209, 0.8);
+          box-shadow: 0 0.2rem 0.2rem rgba(184, 184, 209, 0.8);
 }

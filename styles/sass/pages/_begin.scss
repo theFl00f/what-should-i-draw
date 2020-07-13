@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    background: linear-gradient(56deg, $mainCol 66%, $accentCol 66% 71%, $titleCol 71%) no-repeat;
+    background: linear-gradient(56deg, $mainCol 56%, $accentCol 56% 62%, $titleCol 62%) no-repeat;
     height: 100vh;
 }
 
@@ -11,20 +11,47 @@ body, button {
     font-family: $bodyFont;
     font-weight: $light;
     @include fontSize;
+    display: flex;
+    align-items: center;
+}
+
+main {
+    background-color: $white;
+    max-width: 1400px;
+    width: 63.5%;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 7.5% 0 8.5%;
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 0.2rem rgba(10, 11, 34, 0.2);
 }
 
 h1 {
     font-family: $titleFont;
     @include fontSize(83);
+    color: $titleCol;
 }
 
 h2 {
     text-transform: lowercase;
     @include fontSize(29);
+    margin-top: 1.25%;
+    color: $accentCol;
+    letter-spacing: -.045rem;
 }
 
 button {
     text-transform: uppercase;
     font-weight: $med;
-    @include fontSize(23)
+    padding: 1.25% 6.55%;
+    @include fontSize(23);
+    margin-top: 8%;
+    background-color: $mainCol;
+    border: none;
+    border-radius: 15rem;
+    color: $accentCol;
+    box-shadow: 0 0.2rem 0.2rem rgba(184, 184, 209, .8);
 }

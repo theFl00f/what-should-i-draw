@@ -255,6 +255,20 @@ header {
           transform: translateY(-72.5%);
 }
 
+.greeting {
+  position: relative;
+  bottom: 3.4vh;
+  opacity: 0;
+  color: #5B5F97;
+  letter-spacing: -.045rem;
+}
+
+.greeting.visible {
+  opacity: 1;
+  -webkit-transition: opacity 1s ease;
+  transition: opacity 1s ease;
+}
+
 main {
   background-color: #FFFFFB;
   max-width: 1400px;

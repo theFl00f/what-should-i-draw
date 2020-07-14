@@ -24,6 +24,19 @@ header {
     transform: translateY(-72.5%);
 }
 
+.greeting {
+    position: relative;
+    bottom: 3.4vh;
+    opacity: 0;
+    color: $mainCol;
+    letter-spacing: -.045rem;
+}
+
+.greeting.visible {
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+
 main {
     background-color: $white;
     max-width: 1400px;

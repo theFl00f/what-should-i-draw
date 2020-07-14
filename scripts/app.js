@@ -1,5 +1,6 @@
-const beginButton = document.getElementById('begin')
-const titleGroup = document.getElementById('title')
+const beginButton = document.getElementById('begin');
+const titleGroup = document.getElementById('title');
+const output = document.getElementById('out')
 
 const data = {
     food: [
@@ -12,5 +13,14 @@ const data = {
 
 beginButton.addEventListener('click', function() {
     this.parentNode.removeChild(this);
-    titleGroup.classList.add('generate')
+    titleGroup.classList.add('generate');
+
+    let node = document.createElement('p');
+    let textnode = document.createTextNode('Your words are...')
+    node.appendChild(textnode);
+    node.classList.add('greeting')
+    output.appendChild(node);
+    setTimeout(function() {
+        document.querySelector('.greeting').classList.add('visible')
+    }, 500)
 })

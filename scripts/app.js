@@ -1,3 +1,6 @@
+const beginButton = document.getElementById('begin')
+const titleGroup = document.getElementById('title')
+
 const data = {
     food: [
         "kiwi", "apple", "watermelon", "starfruit", "tangerine", "blueberry", "strawberry", "blackberry", "leek", "spring onion", "banana", "cherry", "potato", "chocolate", "whipped cream", "hot sauce", "arugula", "noodles", "egg", "pizza", "plum", "peppermint"
@@ -7,4 +10,7 @@ const data = {
     ]
 }
 
-console.log(data)
+beginButton.addEventListener('click', function() {
+    this.parentNode.removeChild(this);
+    titleGroup.classList.add('generate')
+})

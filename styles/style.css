@@ -243,6 +243,18 @@ body, button {
           align-items: center;
 }
 
+header {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.generate {
+  -webkit-transform: translateY(-72.5%);
+          transform: translateY(-72.5%);
+}
+
 main {
   background-color: #FFFFFB;
   max-width: 1400px;
@@ -263,6 +275,7 @@ main {
   border-radius: 1rem;
   -webkit-box-shadow: 0 0.4rem 0.2rem rgba(10, 11, 34, 0.2);
           box-shadow: 0 0.4rem 0.2rem rgba(10, 11, 34, 0.2);
+  height: 31.3rem;
 }
 
 h1 {

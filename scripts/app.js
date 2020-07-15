@@ -14,7 +14,10 @@ const data = {
 beginButton.addEventListener('click', function() {
     this.parentNode.removeChild(this);
     titleGroup.classList.add('generate');
+    showGenerationPage()
+})
 
+const showGenerationPage = () => {
     let node = document.createElement('p');
     let textnode = document.createTextNode('Your words are...')
     node.appendChild(textnode);
@@ -23,4 +26,4 @@ beginButton.addEventListener('click', function() {
     setTimeout(function() {
         document.querySelector('.greeting').classList.add('visible')
     }, 500)
-})
+}

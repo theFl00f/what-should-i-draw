@@ -83,3 +83,8 @@ button {
         color: $secondaryAccent;
     }
 }
+
+li {
+    @include fontSize(50);
+    text-transform: capitalize;
+}

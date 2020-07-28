@@ -60,10 +60,19 @@ const getWords = (arr1, arr2) => {
 }
 
 const appendWords = (arr) => {
+    let isFirst = true;
     for (let i = 0; i < arr.length; i++) {
         const newLi = document.createElement('li');
         const textNode = document.createTextNode(arr[i])
         newLi.appendChild(textNode);
-        output.appendChild(newLi)
+        output.appendChild(newLi);
+        if (isFirst) {
+            const newP = document.createElement('p');
+            const textNodeP = document.createTextNode('and')
+            newP.appendChild(textNodeP);
+            output.appendChild(newP);
+            isFirst = false;
+        }
     }
+
 }

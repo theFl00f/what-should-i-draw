@@ -273,6 +273,7 @@ header {
 }
 
 main {
+  position: relative;
   background-color: #FFFFFB;
   max-width: 1400px;
   width: 63.5%;
@@ -365,4 +366,18 @@ li {
   -webkit-box-shadow: -1px 4px 2px #B8B8D154;
           box-shadow: -1px 4px 2px #B8B8D154;
   white-space: nowrap;
+}
+
+p.word {
+  color: #FF6B6C;
+  font-size: 24px;
+  font-size: 1.284rem;
+  letter-spacing: 0.0145rem;
+  position: relative;
+  top: 3px;
+}
+
+button#refresh {
+  position: absolute;
+  bottom: 10%;
 }

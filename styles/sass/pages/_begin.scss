@@ -40,6 +40,7 @@ header {
 }
 
 main {
+    position: relative;
     background-color: $white;
     max-width: 1400px;
     width: 63.5%;
@@ -107,4 +108,17 @@ li {
     min-width: fit-content;
     box-shadow: -1px 4px 2px #B8B8D154;
     white-space: nowrap;
+}
+
+p.word {
+    color: $titleCol;
+    @include fontSize(24);
+    letter-spacing: 0.0145rem;
+    position: relative;
+    top: 3px;
+}
+
+button#refresh {
+    position: absolute;
+    bottom: 10%;
 }

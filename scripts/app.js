@@ -21,6 +21,12 @@ beginButton.addEventListener('click', function() {
 })
 
 const showGenerationPage = () => {
+    appendGreeting();
+    getData();
+    appendButton();
+}
+
+const appendGreeting = () => {
     let node = document.createElement('p');
     let textnode = document.createTextNode('Your words are...');
     node.appendChild(textnode);
@@ -29,8 +35,6 @@ const showGenerationPage = () => {
     setTimeout(function() {
         document.querySelector('.greeting').classList.add('visible')
     }, 1000)
-    getData()
-    console.log(words)
 }
 
 getData = () => {
@@ -83,4 +87,14 @@ const removeWords = (arr) => {
     for (let i = 0; i < arr.length; i++) {
         arr[i].remove()
     }
+}
+
+appendButton = () => {
+    const newButton = document.createElement('button');
+    const textNodeB = document.createTextNode('Another!');
+    newButton.appendChild(textNodeB);
+    newButton.id = 'refresh'
+    output.appendChild(newButton);
+    newButton.onclick = getData;
+    return;
 }

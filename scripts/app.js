@@ -22,7 +22,7 @@ beginButton.addEventListener('click', function() {
 
 const showGenerationPage = () => {
     let node = document.createElement('p');
-    let textnode = document.createTextNode('Your words are...')
+    let textnode = document.createTextNode('Your words are...');
     node.appendChild(textnode);
     node.classList.add('greeting')
     output.appendChild(node);
@@ -34,6 +34,7 @@ const showGenerationPage = () => {
 }
 
 getData = () => {
+    removeWords([...document.getElementsByClassName('word')])
     getRandomNumbers(data);
     getWords(data, randomNumbers)
     appendWords(words)
@@ -65,14 +66,21 @@ const appendWords = (arr) => {
         const newLi = document.createElement('li');
         const textNode = document.createTextNode(arr[i])
         newLi.appendChild(textNode);
+        newLi.classList = 'word'
         output.appendChild(newLi);
         if (isFirst) {
             const newP = document.createElement('p');
             const textNodeP = document.createTextNode('and')
             newP.appendChild(textNodeP);
+            newP.classList = 'word'
             output.appendChild(newP);
             isFirst = false;
         }
     }
+}
 
+const removeWords = (arr) => {
+    for (let i = 0; i < arr.length; i++) {
+        arr[i].remove()
+    }
 }

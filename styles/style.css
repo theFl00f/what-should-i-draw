@@ -257,10 +257,13 @@ header {
 
 .greeting {
   position: relative;
-  top: -60%;
+  top: -35%;
   opacity: 0;
   color: #5B5F97;
   letter-spacing: -.045rem;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  margin-bottom: 3.5%;
 }
 
 .greeting.visible {
@@ -328,8 +331,38 @@ button:hover {
   color: #FFE8BB;
 }
 
+ul {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 li {
-  font-size: 50px;
-  font-size: 2.675rem;
+  font-size: 45px;
+  font-size: 2.4075rem;
+  font-weight: 400;
   text-transform: capitalize;
+  color: #5B5F97;
+  letter-spacing: 0.0297rem;
+  background-color: #FFE8BB;
+  border-radius: 30rem;
+  padding: 1.5% 3%;
+  width: 33%;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  -webkit-box-shadow: -1px 4px 2px #B8B8D154;
+          box-shadow: -1px 4px 2px #B8B8D154;
+  white-space: nowrap;
 }

@@ -26,10 +26,12 @@ header {
 
 .greeting {
     position: relative;
-    top: -60%;
+    top: -35%;
     opacity: 0;
     color: $mainCol;
     letter-spacing: -.045rem;
+    flex-basis: 100%;
+    margin-bottom: 3.5%;
 }
 
 .greeting.visible {
@@ -84,7 +86,25 @@ button {
     }
 }
 
+ul {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
 li {
-    @include fontSize(50);
+    @include fontSize(45);
+    font-weight: $med;
     text-transform: capitalize;
+    color: $mainCol;
+    letter-spacing: 0.0297rem;
+    background-color: #FFE8BB;
+    border-radius: 30rem;
+    padding: 1.5% 3%;
+    width: 33%;
+    min-width: fit-content;
+    box-shadow: -1px 4px 2px #B8B8D154;
+    white-space: nowrap;
 }

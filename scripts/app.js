@@ -36,6 +36,7 @@ const showGenerationPage = () => {
 getData = () => {
     getRandomNumbers(data);
     getWords(data, randomNumbers)
+    appendWords(words)
 }
 
 const getRandomNumbers = (array) => {
@@ -56,4 +57,13 @@ const getWords = (arr1, arr2) => {
         arr[i] = getWord(arr1[i], arr2[i])
     }
     return words = arr;
+}
+
+const appendWords = (arr) => {
+    for (let i = 0; i < arr.length; i++) {
+        const newLi = document.createElement('li');
+        const textNode = document.createTextNode(arr[i])
+        newLi.appendChild(textNode);
+        output.appendChild(newLi)
+    }
 }

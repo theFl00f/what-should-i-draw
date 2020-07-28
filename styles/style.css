@@ -257,7 +257,7 @@ header {
 
 .greeting {
   position: relative;
-  bottom: 160%;
+  top: -60%;
   opacity: 0;
   color: #5B5F97;
   letter-spacing: -.045rem;

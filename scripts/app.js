@@ -63,20 +63,28 @@ const getWords = (arr1, arr2) => {
     return words = arr;
 }
 
+const makeLi = (arr, i) => {
+    const newLi = document.createElement('li');
+    const textNode = document.createTextNode(arr[i])
+    newLi.appendChild(textNode);
+    newLi.classList = 'word'
+    return output.appendChild(newLi);
+}
+
+const makeP = () => {
+    const newP = document.createElement('p');
+    const textNodeP = document.createTextNode('and')
+    newP.appendChild(textNodeP);
+    newP.classList = 'word'
+    return output.appendChild(newP);
+}
+
 const appendWords = (arr) => {
     let isFirst = true;
     for (let i = 0; i < arr.length; i++) {
-        const newLi = document.createElement('li');
-        const textNode = document.createTextNode(arr[i])
-        newLi.appendChild(textNode);
-        newLi.classList = 'word'
-        output.appendChild(newLi);
+        makeLi(arr, i)
         if (isFirst) {
-            const newP = document.createElement('p');
-            const textNodeP = document.createTextNode('and')
-            newP.appendChild(textNodeP);
-            newP.classList = 'word'
-            output.appendChild(newP);
+            makeP()
             isFirst = false;
         }
     }

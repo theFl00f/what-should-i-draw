@@ -34,9 +34,9 @@ header {
     margin-bottom: 3.5%;
 }
 
-.greeting.visible {
+.greeting.visible, li.visible, p.word.visible, button#refresh.visible {
     opacity: 1;
-    transition: opacity 1s ease;
+    transition: opacity 1s ease-in-out;
 }
 
 main {
@@ -81,7 +81,7 @@ button {
     color: $accentCol;
     box-shadow: 0 0.2rem 0.2rem rgba(184, 184, 209, .8);
 
-    &:hover {
+    &:hover, &:focus-within {
         background-color: $secondaryCol;
         color: $secondaryAccent;
     }
@@ -108,7 +108,9 @@ li {
     min-width: fit-content;
     box-shadow: -1px 4px 2px #B8B8D154;
     white-space: nowrap;
+    opacity: 0;
 }
+
 
 p.word {
     color: $titleCol;
@@ -116,9 +118,11 @@ p.word {
     letter-spacing: 0.0145rem;
     position: relative;
     top: 3px;
+    opacity: 0;
 }
 
 button#refresh {
     position: absolute;
     bottom: 10%;
+    opacity: 0;
 }

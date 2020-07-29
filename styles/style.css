@@ -266,10 +266,10 @@ header {
   margin-bottom: 3.5%;
 }
 
-.greeting.visible {
+.greeting.visible, li.visible, p.word.visible, button#refresh.visible {
   opacity: 1;
-  -webkit-transition: opacity 1s ease;
-  transition: opacity 1s ease;
+  -webkit-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
 }
 
 main {
@@ -327,7 +327,7 @@ button {
           box-shadow: 0 0.2rem 0.2rem rgba(184, 184, 209, 0.8);
 }
 
-button:hover {
+button:hover, button:focus-within {
   background-color: #B8B8D1;
   color: #FFE8BB;
 }
@@ -366,6 +366,7 @@ li {
   -webkit-box-shadow: -1px 4px 2px #B8B8D154;
           box-shadow: -1px 4px 2px #B8B8D154;
   white-space: nowrap;
+  opacity: 0;
 }
 
 p.word {
@@ -375,9 +376,11 @@ p.word {
   letter-spacing: 0.0145rem;
   position: relative;
   top: 3px;
+  opacity: 0;
 }
 
 button#refresh {
   position: absolute;
   bottom: 10%;
+  opacity: 0;
 }

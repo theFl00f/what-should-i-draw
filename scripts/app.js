@@ -13,6 +13,7 @@ const data = [
 
 let randomNumbers = []
 let words = '';
+let isFirstTransition = true;
 
 beginButton.addEventListener('click', function() {
     this.parentNode.removeChild(this);
@@ -32,9 +33,13 @@ const appendGreeting = () => {
     node.appendChild(textnode);
     node.classList.add('greeting')
     output.appendChild(node);
+    makeVisible(document.querySelector('.greeting'), 1000)
+}
+
+const makeVisible = (element, interval) => {
     setTimeout(function() {
-        document.querySelector('.greeting').classList.add('visible')
-    }, 1000)
+        element.classList.add('visible')
+    }, interval)
 }
 
 getData = () => {
@@ -81,12 +86,23 @@ const appendWords = (arr) => {
             isFirst = false;
         }
     }
+    transitionWords()
 }
 
 const removeWords = (arr) => {
     for (let i = 0; i < arr.length; i++) {
         arr[i].remove()
     }
+}
+
+const transitionWords = () => {
+    const wordArr = [...document.getElementsByClassName('word')] 
+    let durationArr = [];
+    isFirstTransition ? durationArr = [1500, 2100, 2700] : durationArr = [200, 800, 1400]
+    for (let i = 0; i < wordArr.length; i++) {
+        makeVisible(wordArr[i], durationArr[i]);
+    }
+    isFirstTransition = false;
 }
 
 appendButton = () => {
@@ -96,5 +112,6 @@ appendButton = () => {
     newButton.id = 'refresh'
     output.appendChild(newButton);
     newButton.onclick = getData;
+    makeVisible(newButton, 3600)
     return;
 }

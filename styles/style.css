@@ -263,10 +263,10 @@ header {
   letter-spacing: -.045rem;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
-  margin-bottom: 3.5%;
+  margin-bottom: 2.25rem;
 }
 
-.greeting.visible, li.visible, p.word.visible, button#refresh.visible {
+.greeting.visible, li.visible, p.word.visible, button#refresh.visible, main.visible {
   opacity: 1;
   -webkit-transition: opacity 1s ease-in-out;
   transition: opacity 1s ease-in-out;
@@ -294,6 +294,7 @@ main {
   -webkit-box-shadow: 0 0.4rem 0.2rem rgba(10, 11, 34, 0.2);
           box-shadow: 0 0.4rem 0.2rem rgba(10, 11, 34, 0.2);
   height: 31.3rem;
+  opacity: 0;
 }
 
 h1 {

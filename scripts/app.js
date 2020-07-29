@@ -1,6 +1,6 @@
 const beginButton = document.getElementById('begin');
 const titleGroup = document.getElementById('title');
-const output = document.getElementById('out')
+const output = document.getElementById('out');
 
 const data = [
     [
@@ -14,12 +14,6 @@ const data = [
 let randomNumbers = []
 let words = '';
 let isFirstTransition = true;
-
-beginButton.addEventListener('click', function() {
-    this.parentNode.removeChild(this);
-    titleGroup.classList.add('generate');
-    showGenerationPage()
-})
 
 const showGenerationPage = () => {
     appendGreeting();
@@ -42,11 +36,11 @@ const makeVisible = (element, interval) => {
     }, interval)
 }
 
-getData = () => {
+const getData = () => {
     removeWords([...document.getElementsByClassName('word')])
     getRandomNumbers(data);
-    getWords(data, randomNumbers)
-    appendWords(words)
+    getWords(data, randomNumbers);
+    appendWords(words);
 }
 
 const getRandomNumbers = (array) => {
@@ -86,7 +80,7 @@ const appendWords = (arr) => {
             isFirst = false;
         }
     }
-    transitionWords()
+    transitionWords();
 }
 
 const removeWords = (arr) => {
@@ -105,13 +99,23 @@ const transitionWords = () => {
     isFirstTransition = false;
 }
 
-appendButton = () => {
+const appendButton = () => {
     const newButton = document.createElement('button');
     const textNodeB = document.createTextNode('Another!');
     newButton.appendChild(textNodeB);
     newButton.id = 'refresh'
     output.appendChild(newButton);
     newButton.onclick = getData;
-    makeVisible(newButton, 3600)
+    makeVisible(newButton, 3600);
     return;
 }
+
+beginButton.addEventListener('click', function() {
+    this.parentNode.removeChild(this);
+    titleGroup.classList.add('generate');
+    showGenerationPage()
+})
+
+window.addEventListener('load', function() {
+    makeVisible(document.querySelector('main'), 600)
+})

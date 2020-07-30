@@ -49,17 +49,31 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 7.5% 0 8.5%;
+    padding: 7.5% 5% 8.5%;
     border-radius: 1rem;
     box-shadow: 0 0.4rem 0.2rem rgba(10, 11, 34, 0.2);
     height: 31.3rem;
     opacity: 0;
+    @include break(lrg) {
+        width: 80%;
+        height: 40rem;
+        padding: 8.5% 5% 7%;
+    } 
+    @include break(sm) {
+        height: 60%;
+        padding: 12% 5% 10%;
+    }
+    @include break(xs) {
+        height: 85%;
+    }
 }
 
 h1 {
     font-family: $titleFont;
     @include fontSize(83);
     color: $titleCol;
+    @include fontSize(88);
+    line-height: 5.2rem;
 }
 
 h2 {
@@ -68,12 +82,20 @@ h2 {
     margin-top: 1.25%;
     color: $accentCol;
     letter-spacing: -.045rem;
+    line-height: 2.5rem;
+    @include break(lrg) {
+        margin-top: 3%;
+        @include fontSize(35);
+    }
+    @include break(sm) {
+        margin-top: 3.5%;
+    }
 }
 
 button {
     text-transform: uppercase;
     font-weight: $med;
-    padding: 1.25% 6.55%;
+    padding: .96rem 5.02rem;
     @include fontSize(23);
     margin-top: 8%;
     background-color: $mainCol;
@@ -81,10 +103,17 @@ button {
     border-radius: 15rem;
     color: $accentCol;
     box-shadow: 0 0.2rem 0.2rem rgba(184, 184, 209, .8);
-
+    margin-top: auto;
     &:hover, &:focus-within {
         background-color: $secondaryCol;
         color: $secondaryAccent;
+    }
+    @include break(lrg) {
+        @include fontSize(32);
+    }
+    @include break(sm) {
+        @include fontSize(40);
+        padding: 1.5rem 4.5rem;
     }
 }
 

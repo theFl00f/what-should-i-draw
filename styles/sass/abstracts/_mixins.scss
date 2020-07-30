@@ -1,6 +1,9 @@
 @mixin break($class) {
-     @if $class == sm {
-          @media (max-width: 480px) { @content; }
+     @if $class == xs {
+          @media (max-width: 380px) { @content; }
+     }
+     @else if $class == sm {
+          @media (max-width: 500px) { @content; }
      }
      @else if $class == med {
           @media (max-width: 768px) { @content; }

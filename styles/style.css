@@ -289,7 +289,7 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 7.5% 0 8.5%;
+  padding: 7.5% 5% 8.5%;
   border-radius: 1rem;
   -webkit-box-shadow: 0 0.4rem 0.2rem rgba(10, 11, 34, 0.2);
           box-shadow: 0 0.4rem 0.2rem rgba(10, 11, 34, 0.2);
@@ -297,11 +297,35 @@ main {
   opacity: 0;
 }
 
+@media (max-width: 940px) {
+  main {
+    width: 80%;
+    height: 40rem;
+    padding: 8.5% 5% 7%;
+  }
+}
+
+@media (max-width: 500px) {
+  main {
+    height: 60%;
+    padding: 12% 5% 10%;
+  }
+}
+
+@media (max-width: 380px) {
+  main {
+    height: 85%;
+  }
+}
+
 h1 {
   font-family: fenwick-outline, sans-serif;
   font-size: 83px;
   font-size: 4.4405rem;
   color: #FF6B6C;
+  font-size: 88px;
+  font-size: 4.708rem;
+  line-height: 5.2rem;
 }
 
 h2 {
@@ -311,12 +335,27 @@ h2 {
   margin-top: 1.25%;
   color: #FFC145;
   letter-spacing: -.045rem;
+  line-height: 2.5rem;
+}
+
+@media (max-width: 940px) {
+  h2 {
+    margin-top: 3%;
+    font-size: 35px;
+    font-size: 1.8725rem;
+  }
+}
+
+@media (max-width: 500px) {
+  h2 {
+    margin-top: 3.5%;
+  }
 }
 
 button {
   text-transform: uppercase;
   font-weight: 400;
-  padding: 1.25% 6.55%;
+  padding: .96rem 5.02rem;
   font-size: 23px;
   font-size: 1.2305rem;
   margin-top: 8%;
@@ -326,11 +365,27 @@ button {
   color: #FFC145;
   -webkit-box-shadow: 0 0.2rem 0.2rem rgba(184, 184, 209, 0.8);
           box-shadow: 0 0.2rem 0.2rem rgba(184, 184, 209, 0.8);
+  margin-top: auto;
 }
 
 button:hover, button:focus-within {
   background-color: #B8B8D1;
   color: #FFE8BB;
+}
+
+@media (max-width: 940px) {
+  button {
+    font-size: 32px;
+    font-size: 1.712rem;
+  }
+}
+
+@media (max-width: 500px) {
+  button {
+    font-size: 40px;
+    font-size: 2.14rem;
+    padding: 1.5rem 4.5rem;
+  }
 }
 
 ul {

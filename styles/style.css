@@ -255,6 +255,13 @@ header {
           transform: translateY(-72.5%);
 }
 
+@media (max-width: 380px) {
+  .generate {
+    -webkit-transform: translateY(-25%);
+            transform: translateY(-25%);
+  }
+}
+
 .greeting {
   position: relative;
   top: -35%;
@@ -315,6 +322,7 @@ main {
 @media (max-width: 380px) {
   main {
     height: 85%;
+    padding: 20% 5% 10%;
   }
 }
 
@@ -348,7 +356,15 @@ h2 {
 
 @media (max-width: 500px) {
   h2 {
-    margin-top: 3.5%;
+    margin-top: 7.5%;
+  }
+}
+
+@media (max-width: 500px) {
+  .generate h2 {
+    -webkit-transition: all .75s ease-in-out;
+    transition: all .75s ease-in-out;
+    margin-top: 1.5%;
   }
 }
 

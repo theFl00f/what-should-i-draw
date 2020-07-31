@@ -134,6 +134,10 @@ ul {
     flex-flow: row wrap;
     justify-content: space-evenly;
     align-items: center;
+    @include break(sm) {
+        flex-flow: column nowrap;
+        justify-content: space-between;
+    }
 }
 
 li {
@@ -160,10 +164,16 @@ p.word {
     position: relative;
     top: 3px;
     opacity: 0;
+    @include break(sm) {
+        margin: 5% 0;
+    }
 }
 
 button#refresh {
     position: absolute;
     bottom: 10%;
     opacity: 0;
+    @include break(sm) {
+        bottom: 6.5%;        
+    }
 }

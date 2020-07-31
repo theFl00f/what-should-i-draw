@@ -243,6 +243,13 @@ body, button {
           align-items: center;
 }
 
+@media (max-width: 500px) {
+  body, button {
+    font-size: 28px;
+    font-size: 1.498rem;
+  }
+}
+
 header {
   -webkit-transform: translateY(0);
           transform: translateY(0);
@@ -250,9 +257,22 @@ header {
   transition: all 1s ease;
 }
 
+@media (max-width: 500px) {
+  header {
+    height: 42%;
+  }
+}
+
 .generate {
   -webkit-transform: translateY(-72.5%);
           transform: translateY(-72.5%);
+}
+
+@media (max-width: 500px) {
+  .generate {
+    -webkit-transform: translateY(-35%);
+            transform: translateY(-35%);
+  }
 }
 
 @media (max-width: 380px) {
@@ -264,13 +284,20 @@ header {
 
 .greeting {
   position: relative;
-  top: -35%;
+  top: -30%;
   opacity: 0;
   color: #5B5F97;
   letter-spacing: -.045rem;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
   margin-bottom: 2.25rem;
+}
+
+@media (max-width: 500px) {
+  .greeting {
+    margin-bottom: unset;
+    top: -17%;
+  }
 }
 
 .greeting.visible, li.visible, p.word.visible, button#refresh.visible, main.visible {
@@ -319,7 +346,7 @@ main {
   }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 500px) {
   main {
     height: 85%;
     padding: 20% 5% 10%;
@@ -400,7 +427,11 @@ button:hover, button:focus-within {
   button {
     font-size: 40px;
     font-size: 2.14rem;
-    padding: 1.5rem 4.5rem;
+    padding: 1rem 0;
+    width: 85%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
@@ -430,6 +461,9 @@ ul {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
   }
 }
 
@@ -453,6 +487,13 @@ li {
   opacity: 0;
 }
 
+@media (max-width: 500px) {
+  li {
+    width: 100%;
+    padding: 1.25rem 0;
+  }
+}
+
 p.word {
   color: #FF6B6C;
   font-size: 24px;
@@ -466,6 +507,8 @@ p.word {
 @media (max-width: 500px) {
   p.word {
     margin: 5% 0;
+    font-size: 28px;
+    font-size: 1.498rem;
   }
 }
 
@@ -478,5 +521,7 @@ button#refresh {
 @media (max-width: 500px) {
   button#refresh {
     bottom: 6.5%;
+    left: 50%;
+    margin-left: -42.5%;
   }
 }

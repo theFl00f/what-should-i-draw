@@ -13,15 +13,24 @@ body, button {
     @include fontSize;
     display: flex;
     align-items: center;
+    @include break(sm) {
+        @include fontSize(28)
+    }
 }
 
 header {
     transform: translateY(0);
     transition: all 1s ease;
+    @include break(sm) {
+        height: 42%;
+    }
 }
 
 .generate {
     transform: translateY(-72.5%);
+    @include break(sm) {
+        transform: translateY(-35%);
+    }
     @include break(xs) {
         transform: translateY(-25%);
     }
@@ -29,12 +38,16 @@ header {
 
 .greeting {
     position: relative;
-    top: -35%;
+    top: -30%;
     opacity: 0;
     color: $mainCol;
     letter-spacing: -.045rem;
     flex-basis: 100%;
     margin-bottom: 2.25rem;
+    @include break(sm) {
+        margin-bottom: unset;
+        top: -17%;
+    }
 }
 
 .greeting.visible, li.visible, p.word.visible, button#refresh.visible, main.visible {
@@ -66,7 +79,7 @@ main {
         height: 60%;
         padding: 12% 5% 10%;
     }
-    @include break(xs) {
+    @include break(sm) {
         height: 85%;
         padding: 20% 5% 10%;
     }
@@ -124,7 +137,9 @@ button {
     }
     @include break(sm) {
         @include fontSize(40);
-        padding: 1.5rem 4.5rem;
+        padding: 1rem 0;
+        width: 85%;
+        justify-content: center;      
     }
 }
 
@@ -137,6 +152,8 @@ ul {
     @include break(sm) {
         flex-flow: column nowrap;
         justify-content: space-between;
+        align-items: stretch;
+
     }
 }
 
@@ -154,6 +171,10 @@ li {
     box-shadow: -1px 4px 2px #B8B8D154;
     white-space: nowrap;
     opacity: 0;
+    @include break(sm) {
+        width: 100%;
+        padding: 1.25rem 0;
+    }
 }
 
 
@@ -166,6 +187,7 @@ p.word {
     opacity: 0;
     @include break(sm) {
         margin: 5% 0;
+        @include fontSize(28);
     }
 }
 
@@ -174,6 +196,8 @@ button#refresh {
     bottom: 10%;
     opacity: 0;
     @include break(sm) {
-        bottom: 6.5%;        
+        bottom: 6.5%; 
+        left: 50%;
+        margin-left: -42.5%; 
     }
 }

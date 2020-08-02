@@ -241,6 +241,7 @@ body, button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-top: auto;
 }
 
 @media (max-width: 500px) {
@@ -266,6 +267,13 @@ header {
 .generate {
   -webkit-transform: translateY(-72.5%);
           transform: translateY(-72.5%);
+}
+
+@media (max-width: 768px) {
+  .generate {
+    -webkit-transform: translateY(-44.5%);
+            transform: translateY(-44.5%);
+  }
 }
 
 @media (max-width: 500px) {
@@ -331,7 +339,7 @@ main {
   opacity: 0;
 }
 
-@media (max-width: 940px) {
+@media (max-width: 985px) {
   main {
     width: 80%;
     height: 40rem;
@@ -367,15 +375,13 @@ h2 {
   text-transform: lowercase;
   font-size: 29px;
   font-size: 1.5515rem;
-  margin-top: 1.25%;
   color: #FFC145;
   letter-spacing: -.045rem;
   line-height: 2.5rem;
 }
 
-@media (max-width: 940px) {
+@media (max-width: 985px) {
   h2 {
-    margin-top: 3%;
     font-size: 35px;
     font-size: 1.8725rem;
   }
@@ -398,7 +404,7 @@ h2 {
 button {
   text-transform: uppercase;
   font-weight: 400;
-  padding: .96rem 5.02rem;
+  padding: .96rem 5rem;
   font-size: 23px;
   font-size: 1.2305rem;
   margin-top: 8%;
@@ -408,7 +414,7 @@ button {
   color: #FFC145;
   -webkit-box-shadow: 0 0.2rem 0.2rem rgba(184, 184, 209, 0.8);
           box-shadow: 0 0.2rem 0.2rem rgba(184, 184, 209, 0.8);
-  margin-top: auto;
+  margin-top: 3rem;
 }
 
 button:hover, button:focus-within {
@@ -416,10 +422,11 @@ button:hover, button:focus-within {
   color: #FFE8BB;
 }
 
-@media (max-width: 940px) {
+@media (max-width: 985px) {
   button {
     font-size: 32px;
     font-size: 1.712rem;
+    margin-top: auto;
   }
 }
 
@@ -444,9 +451,9 @@ ul {
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -458,9 +465,6 @@ ul {
     -webkit-box-direction: normal;
         -ms-flex-flow: column nowrap;
             flex-flow: column nowrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
     -webkit-box-align: stretch;
         -ms-flex-align: stretch;
             align-items: stretch;
@@ -477,7 +481,7 @@ li {
   background-color: #FFE8BB;
   border-radius: 30rem;
   padding: 1.5% 3%;
-  width: 33%;
+  width: 40%;
   min-width: -webkit-fit-content;
   min-width: -moz-fit-content;
   min-width: fit-content;
@@ -516,12 +520,14 @@ button#refresh {
   position: absolute;
   bottom: 10%;
   opacity: 0;
+  margin: 0 auto;
+  left: 50%;
+  margin-left: -10rem;
 }
 
 @media (max-width: 500px) {
   button#refresh {
-    bottom: 6.5%;
-    left: 50%;
     margin-left: -42.5%;
+    bottom: 6.5%;
   }
 }

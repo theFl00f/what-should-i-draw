@@ -13,6 +13,7 @@ body, button {
     @include fontSize;
     display: flex;
     align-items: center;
+    margin-top: auto;
     @include break(sm) {
         @include fontSize(28)
     }
@@ -28,6 +29,9 @@ header {
 
 .generate {
     transform: translateY(-72.5%);
+    @include break( med) {
+        transform: translateY(-44.5%);
+    }
     @include break(sm) {
         transform: translateY(-35%);
     }
@@ -96,12 +100,10 @@ h1 {
 h2 {
     text-transform: lowercase;
     @include fontSize(29);
-    margin-top: 1.25%;
     color: $accentCol;
     letter-spacing: -.045rem;
     line-height: 2.5rem;
     @include break(lrg) {
-        margin-top: 3%;
         @include fontSize(35);
     }
     @include break(sm) {
@@ -119,7 +121,7 @@ h2 {
 button {
     text-transform: uppercase;
     font-weight: $med;
-    padding: .96rem 5.02rem;
+    padding: .96rem 5rem;
     @include fontSize(23);
     margin-top: 8%;
     background-color: $mainCol;
@@ -127,13 +129,14 @@ button {
     border-radius: 15rem;
     color: $accentCol;
     box-shadow: 0 0.2rem 0.2rem rgba(184, 184, 209, .8);
-    margin-top: auto;
+    margin-top: 3rem;
     &:hover, &:focus-within {
         background-color: $secondaryCol;
         color: $secondaryAccent;
     }
     @include break(lrg) {
         @include fontSize(32);
+        margin-top: auto;
     }
     @include break(sm) {
         @include fontSize(40);
@@ -147,11 +150,10 @@ ul {
     width: 100%;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     @include break(sm) {
         flex-flow: column nowrap;
-        justify-content: space-between;
         align-items: stretch;
 
     }
@@ -166,7 +168,7 @@ li {
     background-color: #FFE8BB;
     border-radius: 30rem;
     padding: 1.5% 3%;
-    width: 33%;
+    width: 40%;
     min-width: fit-content;
     box-shadow: -1px 4px 2px #B8B8D154;
     white-space: nowrap;
@@ -195,9 +197,11 @@ button#refresh {
     position: absolute;
     bottom: 10%;
     opacity: 0;
+    margin: 0 auto;
+    left: 50%;
+    margin-left: -10rem;
     @include break(sm) {
-        bottom: 6.5%; 
-        left: 50%;
         margin-left: -42.5%; 
+        bottom: 6.5%; 
     }
 }

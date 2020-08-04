@@ -72,6 +72,7 @@ main {
     padding: 7.5% 5% 8.5%;
     border-radius: 1rem;
     box-shadow: 0 0.4rem 0.2rem rgba(10, 11, 34, 0.2);
+    box-shadow: 0 0.4rem 0.2rem rgba(0, 0, 0, 0.383);
     height: 31.3rem;
     opacity: 0;
     @include break(lrg) {
@@ -165,7 +166,7 @@ li {
     text-transform: capitalize;
     color: $mainCol;
     letter-spacing: 0.0297rem;
-    background-color: #FFE8BB;
+    background-color: $secondaryAccent;
     border-radius: 30rem;
     padding: 1.5% 3%;
     width: 40%;
@@ -195,11 +196,15 @@ p.word {
 
 button#refresh {
     position: absolute;
-    bottom: 10%;
+    bottom: 8%;
     opacity: 0;
     margin: 0 auto;
     left: 50%;
-    margin-left: -10rem;
+    margin-left: -8.6rem;
+    @include break(lrg) {
+        bottom: 10%;
+        margin-left: -10rem;
+    }
     @include break(sm) {
         margin-left: -42.5%; 
         bottom: 6.5%; 
